@@ -1,1 +1,3 @@
-Thermostat.js
+function Thermostat() {
+  this.temperature = 20;
+}
