@@ -8,6 +8,18 @@
       font-size: 30px;
       font-family: 'Helvetica Neue';
     }
+
+    .efficient {
+      color: green;
+    }
+
+    .average {
+      color: orange;
+    }
+
+    .inefficient {
+      color: red;
+    }
   </style>
 </head>
 <body>
@@ -17,12 +29,15 @@
    <button class="increaseTemp">▲</button>
    <button class="decreaseTemp">▼</button>
    <button class="reset">RESET</button>
+   <br>
+   <input type='checkbox' id='psm' checked ><label for='psm'>Power Saving Mode</label>
 
    <script src='src/Thermostat.js'></script>
    <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
    <script>
     function updateTemperature(thermostat) {
       $('.temperature').text(thermostat.temperature);
+      $('h2').attr('class', '').addClass(thermostat.energyUsage());
     }
     $(document).ready(function(){
       var thermostat = new Thermostat();
@@ -43,7 +58,9 @@
         thermostat.reset();
         updateTemperature(thermostat);
       })
-
+      $('#psm').on('change',function(){
+        thermostat.powerSavingMode = $(this).prop('checked');
+      })
     });
    </script>
 </body>
