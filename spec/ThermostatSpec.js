@@ -76,5 +76,21 @@ describe("Thermostat", function() {
         expect(thermostat.temperature).toEqual(20);
       });
     });
+    describe("energy usage", function(){
+      it("is efficient if < 18", function(){
+        thermostat.temperature = 15;
+        expect(thermostat.energyUsage()).toEqual('efficient');
+      });
+
+      it("is average if >= 18 & < 25",function(){
+        thermostat.temperature = 20;
+        expect(thermostat.energyUsage()).toEqual('average');
+      });
+
+      it("is inefficient if > 25", function(){
+        thermostat.temperature = 27
+        expect(thermostat.energyUsage()).toEqual('inefficient');
+      });
+    });
   });
 });
