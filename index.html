@@ -49,21 +49,23 @@
 
       $('.increaseTemp').on('click',function(){
          thermostat.increaseTemperature();
-         updateTemperature(thermostat);
       });
 
       $('.decreaseTemp').on('click',function(){
         thermostat.decreaseTemperature();
-        updateTemperature(thermostat);
       });
 
       $('.reset').on('click',function(){
         thermostat.reset();
+      });
+
+      $('button').on('click', function(){
         updateTemperature(thermostat);
-      })
+      });
+
       $('#psm').on('change',function(){
         thermostat.powerSavingMode = $(this).prop('checked');
-      })
+      });
     });
    </script>
 </body>
