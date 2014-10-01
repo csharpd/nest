@@ -15,7 +15,8 @@
     <span class='temperature'>20</span>°C
   </h2>
    <button class="increaseTemp">▲</button>
-   <button>▼</button>
+   <button class="decreaseTemp">▼</button>
+   <button class="reset">RESET</button>
 
    <script src='src/Thermostat.js'></script>
    <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
@@ -32,6 +33,17 @@
          thermostat.increaseTemperature();
          updateTemperature(thermostat);
       });
+
+      $('.decreaseTemp').on('click',function(){
+        thermostat.decreaseTemperature();
+        updateTemperature(thermostat);
+      });
+
+      $('.reset').on('click',function(){
+        thermostat.reset();
+        updateTemperature(thermostat);
+      })
+
     });
    </script>
 </body>
