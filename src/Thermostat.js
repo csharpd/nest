@@ -1,5 +1,5 @@
 function Thermostat() {
-  this.temperature = 20;
+  this.temperature = 10;
   this.powerSavingMode = true;
 }
 
