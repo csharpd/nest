@@ -18,7 +18,7 @@ describe("Thermostat", function() {
       expect(thermostat.maximumTemperature()).toEqual(25);
     })
 
-    it('is 32 degrees with PSM on', function() {
+    it('is 32 degrees with PSM off', function() {
       thermostat.powerSavingMode = false;
       expect(thermostat.maximumTemperature()).toEqual(32);
     })
@@ -66,6 +66,14 @@ describe("Thermostat", function() {
         thermostat.temperature = 10
         thermostat.decreaseTemperature();
         expect(thermostat.temperature).toEqual(10);
+      });
+    });
+
+    describe("resetting the temperature",function(){
+      it("resets to 20 degrees",function(){
+        thermostat.temperature = 10;
+        thermostat.reset();
+        expect(thermostat.temperature).toEqual(20);
       });
     });
   });
