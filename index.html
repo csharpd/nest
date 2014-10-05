@@ -2,25 +2,7 @@
 <head>
   <title>Thermostat</title>
   <meta charset='utf8'>
-  <style>
-    body {
-      margin:20px;
-      font-size: 30px;
-      font-family: 'Helvetica Neue';
-    }
-
-    .efficient {
-      color: green;
-    }
-
-    .average {
-      color: orange;
-    }
-
-    .inefficient {
-      color: red;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="lib/thermostat.css">
 </head>
 <body>
   <h2>
@@ -34,39 +16,7 @@
 
    <script src='src/Thermostat.js'></script>
    <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
-   <script>
-    function updateTemperature(thermostat) {
-      $('.temperature').text(thermostat.temperature);
-      $('h2').attr('class', '').addClass(thermostat.energyUsage());
+   <script src='src/thermostatjquery.js'></script>
 
-      $.post('http://localhost:4567/temperature_change', { newTemperature: thermostat.temperature })
-
-    }
-    $(document).ready(function(){
-      var thermostat = new Thermostat();
-
-      updateTemperature(thermostat);
-
-      $('.increaseTemp').on('click',function(){
-         thermostat.increaseTemperature();
-      });
-
-      $('.decreaseTemp').on('click',function(){
-        thermostat.decreaseTemperature();
-      });
-
-      $('.reset').on('click',function(){
-        thermostat.reset();
-      });
-
-      $('button').on('click', function(){
-        updateTemperature(thermostat);
-      });
-
-      $('#psm').on('change',function(){
-        thermostat.powerSavingMode = $(this).prop('checked');
-      });
-    });
-   </script>
 </body>
 </html>

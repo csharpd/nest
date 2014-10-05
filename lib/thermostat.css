@@ -1,0 +1,17 @@
+  body {
+      margin:20px;
+      font-size: 30px;
+      font-family: 'Helvetica Neue';
+    }
+
+    .efficient {
+      color: green;
+    }
+
+    .average {
+      color: orange;
+    }
+
+    .inefficient {
+      color: red;
+    }
