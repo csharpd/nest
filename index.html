@@ -1,22 +1,36 @@
 <html>
-<head>
-  <title>Thermostat</title>
-  <meta charset='utf8'>
-  <link rel="stylesheet" type="text/css" href="lib/thermostat.css">
-</head>
-<body>
-  <h2>
-    <span class='temperature'>20</span>°C
-  </h2>
-   <button class="increaseTemp">▲</button>
-   <button class="decreaseTemp">▼</button>
-   <button class="reset">RESET</button>
-   <br>
-   <input type='checkbox' id='psm' checked ><label for='psm'>Power Saving Mode</label>
+	<head>
+	  <title>Thermostat</title>
+	  <meta charset='utf8'>
+	  <link rel="stylesheet" type="text/css" href="lib/thermostat.css">
+	  <link rel="stylesheet" type="text/css" href="lib/reset.css"
+	  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<section class="base-circle">
+		</section>
+		<section class="color-circle">
+		</section>
+		<section class="knob-circle">
+		</section>
+	    <h2>
+	      <section class="temperature" id="degree">20</section>
+	    </h2>
 
-   <script src='src/Thermostat.js'></script>
-   <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
-   <script src='src/thermostatjquery.js'></script>
+	  <main>
+	    <section class="buttons">
+	      <button class="increaseTemp">▲</button>
+	      <button class="decreaseTemp">▼</button>
+	    </section>
+	     <button class="reset">RESET</button>
+	     <br>
+	     <section class='powersavingmode'>
+	     <input type='checkbox' id='psm' checked ><label for='psm'>Power Saving Mode</label>
+	    </section>
+	  </main>
+	   <script src='src/Thermostat.js'></script>
+	   <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+	   <script src='src/thermostatjquery.js'></script>
 
-</body>
+	</body>
 </html>

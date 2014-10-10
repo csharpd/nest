@@ -102,6 +102,7 @@ body {
 	background-image: -webkit-linear-gradient(90deg, #cfcfcf -10.5%, #e7e7e7 110.5%);
 	background-image: linear-gradient(90deg, #cfcfcf -10.5%, #e7e7e7 110.5%);
 }
+
 #degree {
 	text-shadow: 0 2px 4px rgba(3,4,4,.55);
   font-size: 6.5em;
@@ -115,65 +116,3 @@ body {
   margin: 0 auto;
   margin-top: -178px;
 	}
-
-    .efficient {
-      color: green;
-    }
-
-    .average {
-      color: orange;
-    }
-
-    .inefficient {
-      color: red;
-    }
-
-  main {
-    margin: 0 auto;
-    width: 480px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    align-items: center;
-    }
-
-.buttons {
-  flex-wrap: wrap;
-
-}
-
-.decreaseTemp,.increaseTemp, .reset{
-    border-top: 1px solid #DEDEDE;
-    border-bottom: 1px solid #DEDEDE;
-    border-right: 1px solid #DEDEDE;
-    box-shadow: inset 0px 0px 1px 0.4px #DEDEDE;
-  }
-
-.decreaseTemp {
-  height: 97px;
-}
-
-button {
-  font-size: 2em;
-  cursor: pointer;
-  background: white;
-  border: 1px solid #d1dadd;
-  -o-border-radius: 3px;
-	border-radius: 3px;
-	*-webkit-transition: all 0.25s;
-	transition: all 0.25s;
-	color: #68838c;
-	padding: 1rem 1.5rem 0.75rem;
-	width: 300px;
-	height: 100px;
-}
-
-
-.powersavingmode {
-  background: white;
-  flex-wrap: wrap;
-}}
