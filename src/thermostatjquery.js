@@ -3,8 +3,8 @@
       $('h2').attr('class', '').addClass(thermostat.energyUsage());
 
       $.post('http://localhost:4567/temperature_change', { newTemperature: thermostat.temperature })
+    		};
 
-    }
     $(document).ready(function(){
       var thermostat = new Thermostat();
 
