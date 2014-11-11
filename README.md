@@ -9,7 +9,7 @@ The challenge was to create a simple interface for a digital thermostat, like so
 
 
 ####Deployed
-To view, visit: [http://nestthermostat.herokuapp.com/com/](http://nestthermostat.herokuapp.com/com/)
+To view, visit: [http://nestthermostat.herokuapp.com](http://nestthermostat.herokuapp.com)
 
 ###Technologies
 
